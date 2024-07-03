@@ -57,7 +57,7 @@ public class сalculator {
         if (result >= 1 && result <= 10) {
             System.out.println("Результат (римскими цифрами): " + arabicToRoman(result));
         } else {
-            System.out.println("Результат в римской нотации невозможен, так как число вне диапазона 1-10");
+            System.out.println("Результат в римских чисел невозможен, число вне диапазона 1-10");
         }
     }
 
@@ -67,7 +67,7 @@ public class сalculator {
             System.out.println(prompt);
             input = scanner.next().toUpperCase();
             if (!input.matches("[IVXLCDM]+") && !(input.matches("\\d+") && Integer.parseInt(input) >= 1 && Integer.parseInt(input) <= 10)) {
-                System.out.println("Неверный ввод. Пожалуйста, введите число от 1 до 10.");
+                System.out.println("Ошибка. Введите число от 1 до 10.");
                 input = null;
             }
         } while (input == null);
@@ -91,7 +91,7 @@ public class сalculator {
 
     private static String arabicToRoman(int number) {
         if (number < 1 || number > 10) {
-            return "N/A"; // Римские цифры для чисел вне диапазона 1-10 не существуют
+            return "N/A"; 
         }
         StringBuilder result = new StringBuilder();
         int[] values = {10, 9, 5, 4, 1};
